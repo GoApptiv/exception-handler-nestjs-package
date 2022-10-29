@@ -1,7 +1,7 @@
 import {
   GaException,
   GaRestResponse,
-  ResponseResponseErrorCode,
+  RestResponseErrorCode,
 } from '@goapptiv/rest-response-nestjs';
 import { EventEmitter2 } from '@nestjs/event-emitter';
 import {
@@ -37,7 +37,7 @@ export class InternalServerErrorExceptionsFilter implements ExceptionFilter {
 
     if (typeof errors === 'string') {
       const exception: GaException = {
-        type: ResponseResponseErrorCode.E500_UNIDENTIFIED_INTERNAL_SERVER_ERROR,
+        type: RestResponseErrorCode.E500_UNIDENTIFIED_INTERNAL_SERVER_ERROR,
         message: errors,
         context: {},
       };

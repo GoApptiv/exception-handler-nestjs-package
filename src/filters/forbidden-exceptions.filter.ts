@@ -1,7 +1,7 @@
 import {
   GaException,
   GaRestResponse,
-  ResponseResponseErrorCode,
+  RestResponseErrorCode,
 } from '@goapptiv/rest-response-nestjs';
 import { EventEmitter2 } from '@nestjs/event-emitter';
 import {
@@ -35,7 +35,7 @@ export class ForbiddenExceptionFilter implements ExceptionFilter {
 
     if (typeof errors === 'string') {
       const exception: GaException = {
-        type: ResponseResponseErrorCode.E403_FORBIDDEN,
+        type: RestResponseErrorCode.E403_FORBIDDEN,
         message: errors,
         context: {},
       };

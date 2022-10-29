@@ -1,6 +1,6 @@
 import {
   GaRestResponse,
-  ResponseResponseErrorCode,
+  RestResponseErrorCode,
 } from '@goapptiv/rest-response-nestjs';
 import { Catch, ArgumentsHost, Logger, Inject } from '@nestjs/common';
 import { EventEmitter2 } from '@nestjs/event-emitter';
@@ -39,7 +39,7 @@ export class AllExceptionsFilter extends BaseExceptionFilter {
     res.status(500).json(
       GaRestResponse.error('Internal Server Error', [
         {
-          type: ResponseResponseErrorCode.E500_UNIDENTIFIED_INTERNAL_SERVER_ERROR,
+          type: RestResponseErrorCode.E500_UNIDENTIFIED_INTERNAL_SERVER_ERROR,
           message: 'Internal server error',
           context: {},
         },

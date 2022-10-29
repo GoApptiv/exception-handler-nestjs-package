@@ -1,4 +1,4 @@
-# GoApptiv Standard Exceptions NestJS
+# GoApptiv Standard Exception Handler NestJS
 
 This package provides classes to throw goapptiv standard exception, also it provides exception filters to log the exception and raise an event. The event can be consumed by creating a listener.
 
