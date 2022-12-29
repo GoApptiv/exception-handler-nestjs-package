@@ -54,6 +54,8 @@ The Following Exception comes out of the box:
 2. GaConflictException
 3. GaNotFoundException
 4. GaInternalServerErrorException
+5. GaUnauthorizedException
+6. GaForbiddenException
 
 Example:
 
