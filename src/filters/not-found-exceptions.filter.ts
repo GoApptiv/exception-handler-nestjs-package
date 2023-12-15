@@ -19,7 +19,7 @@ export class NotFoundExceptionFilter implements ExceptionFilter {
 
   constructor(private readonly eventEmitter?: EventEmitter2) {}
 
-  catch(exception: NotFoundException, host: ArgumentsHost) {
+  catch(exception: NotFoundException, host: ArgumentsHost): void {
     const ctx = host.switchToHttp();
     const req = ctx.getRequest();
     const res = ctx.getResponse();

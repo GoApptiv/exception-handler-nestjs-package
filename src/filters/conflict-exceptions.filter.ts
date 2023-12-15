@@ -19,7 +19,7 @@ export class ConflictExceptionsFilter implements ExceptionFilter {
 
   constructor(private readonly eventEmitter?: EventEmitter2) {}
 
-  catch(exception: ConflictException, host: ArgumentsHost) {
+  catch(exception: ConflictException, host: ArgumentsHost): void {
     const ctx = host.switchToHttp();
     const req = ctx.getRequest();
     const res = ctx.getResponse();

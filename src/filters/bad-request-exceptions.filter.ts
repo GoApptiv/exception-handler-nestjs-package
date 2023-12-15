@@ -19,7 +19,7 @@ export class BadRequestExceptionFilter implements ExceptionFilter {
 
   constructor(private readonly eventEmitter?: EventEmitter2) {}
 
-  catch(exception: BadRequestException, host: ArgumentsHost) {
+  catch(exception: BadRequestException, host: ArgumentsHost): void {
     const ctx = host.switchToHttp();
     const req = ctx.getRequest();
     const res = ctx.getResponse();
