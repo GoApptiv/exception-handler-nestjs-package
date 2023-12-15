@@ -19,7 +19,7 @@ export class UnauthorizedExceptionFilter implements ExceptionFilter {
 
   constructor(private readonly eventEmitter?: EventEmitter2) {}
 
-  catch(exception: UnauthorizedException, host: ArgumentsHost) {
+  catch(exception: UnauthorizedException, host: ArgumentsHost): void {
     const ctx = host.switchToHttp();
     const req = ctx.getRequest();
     const res = ctx.getResponse();

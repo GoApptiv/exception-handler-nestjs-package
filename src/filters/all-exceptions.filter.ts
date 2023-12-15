@@ -2,7 +2,7 @@ import {
   GaRestResponse,
   RestResponseErrorCode,
 } from '@goapptiv/rest-response-nestjs';
-import { Catch, ArgumentsHost, Logger, Inject } from '@nestjs/common';
+import { Catch, ArgumentsHost, Logger } from '@nestjs/common';
 import { EventEmitter2 } from '@nestjs/event-emitter';
 import { BaseExceptionFilter } from '@nestjs/core';
 import { Event } from 'src/constants/event.enum';
@@ -15,8 +15,8 @@ export class AllExceptionsFilter extends BaseExceptionFilter {
     super();
   }
 
-  catch(exception: unknown, host: ArgumentsHost) {
-    // request context
+  catch(exception: unknown, host: ArgumentsHost): void {
+    // Request context
     const ctx = host.switchToHttp();
     const req = ctx.getRequest();
     const res = ctx.getResponse();

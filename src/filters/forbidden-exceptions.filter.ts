@@ -19,7 +19,7 @@ export class ForbiddenExceptionFilter implements ExceptionFilter {
 
   constructor(private readonly eventEmitter?: EventEmitter2) {}
 
-  catch(exception: ForbiddenException, host: ArgumentsHost) {
+  catch(exception: ForbiddenException, host: ArgumentsHost): void {
     const ctx = host.switchToHttp();
     const req = ctx.getRequest();
     const res = ctx.getResponse();

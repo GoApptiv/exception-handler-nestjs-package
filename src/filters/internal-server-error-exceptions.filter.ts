@@ -21,7 +21,7 @@ export class InternalServerErrorExceptionsFilter implements ExceptionFilter {
 
   constructor(private readonly eventEmitter?: EventEmitter2) {}
 
-  catch(exception: InternalServerErrorException, host: ArgumentsHost) {
+  catch(exception: InternalServerErrorException, host: ArgumentsHost): void {
     const ctx = host.switchToHttp();
     const req = ctx.getRequest();
     const res = ctx.getResponse();
