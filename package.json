@@ -1,6 +1,6 @@
 {
   "name": "@goapptiv/exception-handler-nestjs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This package provides classes to throw goapptiv standard exception, also it provides exception filters to log the exception and raise an event. The event can be consumed by creating a listener.",
   "main": "dist/index.js",
   "keywords": [
